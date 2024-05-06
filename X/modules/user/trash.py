@@ -14,10 +14,10 @@ async def add_sudo(_, message: Message):
               await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ")
               return
        elif HEROKU_APP_NAME is None:
-              await message.reply_text("`[HEROKU]:" "\nPlease Setup Your` **HEROKU_APP_NAME**")
+              await message.reply_text("[ʜᴇʀᴏᴋᴜ]:" "\nᴘʟᴇᴀꜱᴇ ꜱᴇᴛᴜᴘ ʏᴏᴜʀ **ʜᴇʀᴏᴋᴜ_ᴀᴘᴘ_ɴᴀᴍᴇ**")
               return
        elif HEROKU_API_KEY is None:
-              await message.reply_text("`[HEROKU]:" "\nPlease Setup Your` **HEROKU_API_KEY**")
+              await message.reply_text("[ʜᴇʀᴏᴋᴜ]:" "\nᴘʟᴇᴀꜱᴇ ꜱᴇᴛᴜᴘ ʏᴏᴜʀ **ʜᴇʀᴏᴋᴜ_ᴀᴘɪ_ᴋᴇʏ**")
               return
        else:
               heroku = heroku3.from_key(HEROKU_API_KEY)
