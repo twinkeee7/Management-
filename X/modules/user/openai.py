@@ -50,7 +50,8 @@ from .help import *
 
 API_ENDPOINTS = [
     "https://api.ajinkya.link/gpt.php?question={question}",
-    "https://chatgpt.apinepdev.workers.dev/?question={question}"
+    "https://chatgpt.apinepdev.workers.dev/?question={question}",
+    "https://expressional-leaper.000webhostapp.com/chatgpt.php?question={question}"
 ]
 
 @Client.on_message(
