@@ -60,59 +60,7 @@
 
 <p align="center"><a href="http://dashboard.heroku.com/new?template=https://github.com/Team-Japanese/Japanese-X-Userbot"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝑻𝒐 𝑹𝒂𝒊𝒍𝒘𝒂𝒚
 
-
-<p align="center">
-    <a href="https://railway.app/new/template?template=https://github.com/Team-Japanese/Japanese-X-Userbot-Deploy"> <img src="https://railway.app/button.svg"/></a>
-
-
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝒐𝒏 𝑶𝒌𝒕𝒆𝒕𝒐
-
-  
-<p align="center">
-    <a href="https://cloud.okteto.com">
-    <img src="https://okteto.com/develop-okteto.svg" alt="Deploy on Okteto" width="220px">
-    </a>
-
-    
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝑻𝒐 𝑪𝒐𝒅𝒆𝒔𝒑𝒂𝒄𝒆 
-
-
-</h4>
-
-</p>
-
-<p align="center" >
-    <a href="https://github.com/codespaces/new">
-    <img src="https://img.shields.io/badge/DEPLOY CODESPACE-h?color=black&style=for-the-badge&logo=visualstudiocode" width="220px" height="38.45" alt="Deploy on CodesSpaces" >
-    </a>
-
-
-
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝒐𝒏 𝑴𝒐𝒈𝒆𝒏𝒊𝒖𝒔
-
-<p align="center">
-    <a href="https://studio.mogenius.com/">
-    <img src="https://www.cloudflare.com/static/90073b1e5bd8a0765640a20febb3dc22/mogenius_logo_quer.png" alt="Deploy on Mogenius" width="220px">
-    </a>
-
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝒐𝒏 𝑼𝒇𝒇𝒊𝒛𝒛𝒊
-
-<p align="center">
-    <a href="https://www.uffizzi.com/">
-    <img src="https://i.ibb.co/Y29Kv4X/Screenshot-195.png" alt="Deploy on Uffizzi" width="220px">
-    </a>
-
-## 𝑫𝒆𝒑𝒍𝒐𝒚 𝒐𝒏 𝑩𝒐𝒙𝑴𝒊𝒏𝒆𝑾𝒐𝒓𝒍𝒅
-
-
-<p align="center">
-    <a href="https://dash.boxmineworld.com/">
-    <img src="https://graph.org/file/2af0e67f320986702ea24.jpg" alt="Deploy on Boxmineworld" width="220px">
-    </a>
-    <br>
-    
 # 𝑫𝑰𝑺𝑪𝑳𝑨𝑰𝑴𝑬𝑹
 
 
