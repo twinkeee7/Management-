@@ -33,7 +33,7 @@ f = filters.chat([])
 
 @Client.on_message(f)
 async def auto_read(bot: Client, message: Message):
-    await X.read_history(message.chat.id)
+    await Client.read_history(message.chat.id)
     message.continue_propagation()
 
 
