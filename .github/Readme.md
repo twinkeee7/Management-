@@ -123,6 +123,6 @@
 
 ✧ <b>[𝐌𝐈𝐑𝐙𝐀](https://github.com/MirzaElite) 
 
-✧ <b>[𝗧𝗿𝘆𝗧𝗼𝗟𝗶𝘃𝗲𝗔𝗹𝗼𝗻𝗲](https://github.com/TryToLiveAlone)
+✧ <b>[𝗧𝗿𝘆𝗧𝗼𝗟𝗶𝘃𝗲𝗔𝗹𝗼𝗻𝗲](https://t.me/TryToLiveAlon)
 
 ✧ <b>[𝐊𝐮𝐧𝐚𝐥](https://github.com/VARC9210)
