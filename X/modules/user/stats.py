@@ -49,7 +49,7 @@ from .help import *
     filters.command(["stats", "status"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def stats(client: Client, message: Message):
-    Man = await edit_or_reply(message, "`Collecting stats...`")
+    Man = await edit_or_reply(message, "`Cᴏʟʟᴇᴄᴛɪɴɢ sᴛᴀᴛs...`")
     start = datetime.now()
     u = 0
     g = 0
