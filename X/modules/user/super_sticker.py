@@ -137,7 +137,7 @@ async def sticker_super_func(bot: Client, message: Message):
 
 
 add_command_help(
-    "Sᴜᴘᴇʀ sᴛɪᴄᴋᴇʀ",
+    "•─╼⃝𖠁 Sᴜᴘᴇʀ sᴛɪᴄᴋᴇʀ",
     [
         [
             ".mock",
