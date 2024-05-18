@@ -114,7 +114,7 @@ async def text_api(bot: Client, message: Message):
 # Command help section
 for x in text_apis_data:
     add_command_help(
-        "Tᴇxᴛ",
+        "•─╼⃝𖠁 Tᴇxᴛ",
         [
             [f".{x}", text_apis_data[x]["help"]],
         ],
