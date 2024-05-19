@@ -22,8 +22,6 @@
 
 
 import wikipedia
-from uniborg.util import fire_on_cmd
-
 from config import SUDO_USERS
 from .help import *
 
