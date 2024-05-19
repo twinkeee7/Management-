@@ -36,6 +36,7 @@ opencv-python-headless
 urllib3
 uvloop
 wget==3.2
+wikipedia==1.4.0
 youtube-search-python
 yt-dlp==2024.4.9
 httpx[http2]
