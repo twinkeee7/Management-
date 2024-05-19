@@ -28,7 +28,7 @@ from .help import *
 @Client.on_message(
     filters.command(["wiki"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
-async def (event):
+async def rand(event):
     if event.fwd_from:
         return
     await event.edit("Processing ...")
