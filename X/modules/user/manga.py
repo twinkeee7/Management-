@@ -20,9 +20,8 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#CREDIT : GURU BOT THANKS FOR YOUR ANIME API 
 
-#REMAKE BY : NOBITA XD AND TRYTOLIVEALONE
+#REMAKE BY : NOBITA XD 
 # Copyright (C) 2024 JAPANESE X USERBOT
 #DON'T KANG FUCKING COWARD
 #BSDKE KANG KIYA TOH SOCH LIYO
@@ -31,10 +30,7 @@
 
 
 
-import aiohttp
-from pyrogram import filters, Client
-from pyrogram.types import Message
-from config import OWNER_ID
+from anime_downloader.sites import get_anime_class
+from mal import Anime, AnimeSearch, Manga, MangaSearch
 from config import SUDO_USERS
-from X.helpers.PyroHelpers import GetChatID, ReplyCheck
 from .help import * 
