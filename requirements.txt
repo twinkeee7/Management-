@@ -1,12 +1,10 @@
 APScheduler==3.10.4
 Pillow
 aiohttp
-anime_downloader
 asyncio
 bs4
 dnspython
 emoji
-mal-api
 gitpython
 google-search==1.1.1
 google==3.0.0
