@@ -1,6 +1,7 @@
 APScheduler==3.10.4
 Pillow
 aiohttp
+anime_downloader
 asyncio
 bs4
 dnspython
