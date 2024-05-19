@@ -45,7 +45,7 @@ async def _(event):
         "WikiPedia **Search**: {} \n\n **Result**: \n\n{}".format(input_str, result)
       )
 
-  add_command_help(
+add_command_help(
     "•─╼⃝𖠁 Wɪᴋɪᴘᴇᴅɪᴀ",
     [
         ["wiki", "Tᴏ Wɪᴋɪᴘᴇᴅɪᴀ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ."],
