@@ -29,9 +29,9 @@
 #SAMJHA ? 
 
 
-import requests
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from config import CMD_HANDLER as cmd
-from config import SUDO_USERS
-from .help import * 
+#import requests
+#from pyrogram import Client, filters
+#from pyrogram.types import Message
+#from config import CMD_HANDLER as cmd
+#from config import SUDO_USERS
+#from .help import * 
