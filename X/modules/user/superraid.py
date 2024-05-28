@@ -38,7 +38,7 @@ from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
 from config import CMD_HANDLER as cmd
-from XDB.data import RAID
+from XDB.data import SUPERRAID
 from .help import *
 
 @Client.on_message(
@@ -51,7 +51,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(kex[1])
           counts = int(NOBI[0])
           for _ in range(counts):
-                reply = choice(RAID)
+                reply = choice(SUPERRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0)
@@ -61,7 +61,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(user_id)
           counts = int(NOBI[0])
           for _ in range(counts):
-                reply = choice(RAID)
+                reply = choice(SUPERRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0)
