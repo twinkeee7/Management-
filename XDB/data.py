@@ -20,7 +20,7 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#kexx (⌯ Kᴜɴᴀʟ࿐ 🕊)
+#kexx (⌯ Kᴜɴᴀʟ࿐ 🕊) & 𝐍𝐎𝐁𝐈𝐓𝐀_𝐗𝐃
 
 MASTERS = [6694740726]
 
