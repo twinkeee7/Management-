@@ -20,4 +20,63 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#COMIMG SOON  
+from pyrogram import *
+from pyrogram.types import *
+from pyrogram import Client as kaz
+from pyrogram.errors import MessageNotModified
+from X.helpers.basic import *
+from X.helpers.adminHelpers import DEVS
+from config import *
+from config import CMD_HANDLER
+from config import SUDO_USERS
+from X.utils import *
+from urllib.parse import quote
+
+import requests
+import os
+import json
+import random
+
+from .help import *
+
+API_ENDPOINT = "https://spotifydownloader.hellonepdevs.workers.dev/?url={Spotifyurl}"
+
+@Client.on_message(
+    filters.command(["spotify"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def spotify_downloader(client: Client, message: Message):
+    if len(message.command) == 1:
+        return await message.reply(f"Ketik <code>.{message.command[0]} [Spotify URL]</code> to download a Spotify track")
+    
+    Spotifyurl = message.text.split(" ", maxsplit=1)[1]
+    
+    msg = await message.reply("`Downloading...`")
+
+    stages = ["Downloading.", "Downloading..", "Downloading...", "Downloading..", "Downloading."]
+    
+    for stage in stages:
+        await asyncio.sleep(0.5)
+        await msg.edit(stage)
+    
+    url = API_ENDPOINT.format(Spotifyurl=quote(Spotifyurl))
+    
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        data = response.json()
+        
+        if "download_url" in data:
+            download_url = data["download_url"]
+            await msg.edit(f"Download link: [hidden]({download_url})")
+            await message.reply(
+                f"Title: {data.get('title', 'Unknown Title')}\n"
+                f"Artist: {data.get('artist', 'Unknown Artist')}\n"
+                f"Duration: {data.get('time', '00:00')}"
+            )
+        else:
+            await msg.edit("Failed to retrieve the download URL. Please try again later.")
+    except Exception as e:
+        await msg.edit(f"Error: {str(e)}")
+    
+    await message.delete()
+    
