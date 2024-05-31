@@ -42,7 +42,7 @@ async def naruto(client, message):
   "https://graph.org/file/0dbd7f3b7683ce2d9a8cf.jpg",
   "https://graph.org/file/b6c2f34cd985a2d65b08a.jpg",
     ]
-  naruto_url = random.choice(narutodata)
+    naruto_url = random.choice(narutodata)
     await message.reply_photo(naruto_url)
 
 add_command_help(
