@@ -20,4 +20,34 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#coming soon
+import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+from .help import * 
+
+hl = "."
+
+@Client.on_message(
+    filters.command(["demon"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def demon(client, message):
+    args = message.text.split(" ")[1:]
+    demondata = [
+  "https://graph.org/file/bfb2ebcd0f28e14de5c21.jpg",
+  "https://graph.org/file/68e0ce5c311dd2318c6a0.jpg",
+  "https://graph.org/file/c8f38d5bf6440ef6a3c5f.jpg",
+  "https://graph.org/file/d7aaef7627682856feb63.jpg",
+  "https://graph.org/file/6fab72d5f69ba4fdfd341.jpg",
+  "https://graph.org/file/89ff44f7d9045fbaeffc1.jpg",
+  "https://graph.org/file/89ff44f7d9045fbaeffc1.jpg",
+  "https://graph.org/file/691790c56ca074047b6fb.jpg",
+    ]
+    demon_url = random.choice(demondata)
+    await message.reply_photo(demon_url)
+
+add_command_help(
+    "•─╼⃝𖠁 Dᴇᴍᴏɴ Sʟᴀʏᴇʀ",
+    [
+       ["demon", "Gɪᴠᴇ random Dᴇᴍᴏɴ Sʟᴀʏᴇʀ pic."],
+        ],
+)
