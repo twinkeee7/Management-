@@ -28,13 +28,13 @@ from pyrogram import filters, Client
 from config import OWNER_ID
 from config import SUDO_USERS
 from config import CMD_HANDLER as cmd
-from XDB.data import GROUP, PORM
+from XDB.data import GROUP, SPORMS
 from .help import *
 
 @Client.on_message(
     filters.command(["porm"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
-async def pspam(client: Client, message: Message):
+async def porm(client: Client, message: Message):
     cid = message.chat.id
     if int(cid) in GROUP:
         await message.reply_text("𝐬𝐫𝐲, 𝐭𝐡𝐢𝐬 𝐠𝐫𝐩 𝐢𝐬 𝐩𝐫𝐨𝐭𝐞𝐜𝐭𝐞𝐝 𝐛𝐲 𝐬𝐨𝐦𝐞 𝐯𝐢𝐬𝐮𝐚𝐥 𝐩𝐨𝐰𝐞𝐫𝐬 🛡️")
@@ -44,7 +44,7 @@ async def pspam(client: Client, message: Message):
     if len(altp) > 1:
         quantity = int(altp[1])
         for _ in range(quantity):
-            porm = choice(PORM)
+            porm = choice(SPORMS)
             await client.send_video(cid, porm)
             await asyncio.sleep(0.3)
     else:
