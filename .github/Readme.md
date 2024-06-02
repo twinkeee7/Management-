@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?color=F70000&lines=ωσяℓ∂+ℓαяgεsт+αη∂+ғαsтεsт+υsεявσт;ηεvεя+εxιsтε∂+ιη+тнιs+ωσяℓ∂.;+𝐉𝐚𝐩𝐚𝐧𝐞𝐬𝐞+𝐗++𝐔𝐬𝐞𝐫𝐛𝐨𝐭+❤️✨+%E2%9D%A4%EF%B8%8F">
+  <img src="https://readme-typing-svg.herokuapp.com?color=F70000&lines=ωσяℓ∂+ℓαяgεsт+αη∂+ғαsтεsт+υsεявσт;ηεvεя+εxιsтε∂+ιη+тнιs+ωσяℓ∂+вεғσяε;+𝐉𝐀𝐏𝐀𝐍𝐄𝐒𝐄+𝐗+𝐔𝐒𝐄𝐑𝐁𝐎𝐓❤️✨+%E2%9D%A4%EF%B8%8F">
   
   <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
 <h1 align="center">𝐉𝐀𝐏𝐀𝐍𝐄𝐒𝐄-𝐗-𝐔𝐒𝐄𝐑𝐁𝐎𝐓</h1>
