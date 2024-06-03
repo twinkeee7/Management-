@@ -20,9 +20,9 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-from asyncio import sleep
-from logging import getLogger
+#from asyncio import sleep
+#from logging import getLogger
 
-from pyrogram import filters
-from pyrogram.errors import FloodWait
-from pyrogram.types import Message
+#from pyrogram import filters
+#from pyrogram.errors import FloodWait
+#from pyrogram.types import Message
