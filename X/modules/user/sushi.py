@@ -19,3 +19,36 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+
+import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+from .help import * 
+
+hl = "."
+
+@Client.on_message(
+    filters.command(["sushi"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def sushi(client, message):
+    args = message.text.split(" ")[1:]
+    sushidata = [
+  "https://graph.org/file/f71ac6bd6523efeafa3d0.jpg",
+  "https://graph.org/file/d0123490c0d8d388fd7dc.jpg",
+  "https://graph.org/file/77cfe67b62147a2d8d2ef.jpg",
+  "https://graph.org/file/cabf3e37a4e87dac03844.jpg",
+  "https://graph.org/file/beed348231b92eb51c1e3.jpg",
+  "https://graph.org/file/598c88fb93d9409659567.jpg",
+  "https://graph.org/file/6e4648d4b7e038848b061.jpg",
+  "https://graph.org/file/f71ac6bd6523efeafa3d0.jpg",
+    ]
+    sushi_url = random.choice(sushidata)
+    await message.reply_photo(sushi_url)
+
+add_command_help(
+    "•─╼⃝𖠁 Sᴜsʜɪ",
+    [
+       ["sushi", "Gɪᴠᴇ random Sᴜsʜɪ pic."],
+        ],
+)
