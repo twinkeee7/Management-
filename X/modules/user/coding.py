@@ -19,3 +19,36 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+
+import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+from .help import * 
+
+hl = "."
+
+@Client.on_message(
+    filters.command(["bc"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def coding(client, message):
+    args = message.text.split(" ")[1:]
+    codingdata = [
+  "https://graph.org/file/72e66a11ba6d7bd121e80.jpg",
+  "https://graph.org/file/02e94b94f118322533c31.jpg",
+  "https://graph.org/file/3ae8cb93471d0160ac8c2.jpg",
+  "https://graph.org/file/a6966a6f3674b6dd97727.jpg",
+  "https://graph.org/file/52bc897252d72a95f4c0a.jpg",
+  "https://graph.org/file/ae5439c8b8169b2a7c4e6.jpg",
+  "https://graph.org/file/02e94b94f118322533c31.jpg",
+  "https://graph.org/file/72e66a11ba6d7bd121e80.jpg",
+    ]
+    coding_url = random.choice(codingdata)
+    await message.reply_photo(coding_url)
+
+add_command_help(
+    "•─╼⃝𖠁 Cᴏᴅɪɴɢ",
+    [
+       ["coding", "Gɪᴠᴇ random Cᴏᴅɪɴɢ pic."],
+        ],
+)
