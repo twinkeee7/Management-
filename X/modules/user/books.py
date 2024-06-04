@@ -19,3 +19,35 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+from .help import * 
+
+hl = "."
+
+@Client.on_message(
+    filters.command(["books"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def hinata(client, message):
+    args = message.text.split(" ")[1:]
+    hinatadata = [
+  "https://graph.org/file/1115f328a4d137b812720.jpg",
+  "https://graph.org/file/9da355934845903e505b9.jpg",
+  "https://graph.org/file/67dc6a0c27a295ee73b3c.jpg",
+  "https://graph.org/file/9da355934845903e505b9.jpg",
+  "https://graph.org/file/224030cbb3605e52acb7a.jpg",
+  "https://graph.org/file/90fa326de3fd43da9d2df.jpg",
+  "https://graph.org/file/c6683c4517bab2b30f5df.jpg",
+  "https://graph.org/file/90fa326de3fd43da9d2df.jpg",
+    ]
+    hinata_url = random.choice(hinatadata)
+    await message.reply_photo(hinata_url)
+
+add_command_help(
+    "•─╼⃝𖠁 Bᴏᴏᴋs",
+    [
+       ["books", "Gɪᴠᴇ random Bᴏᴏᴋs pic."],
+        ],
+  )
