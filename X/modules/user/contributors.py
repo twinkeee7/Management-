@@ -20,4 +20,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-  𝐍𝐎𝐁𝐈𝐓𝐀_𝐗𝐃, Kᴜɴᴀʟ࿐ 🕊, 𝐌𝐢𝐑𝐙𝐀, 𝐓𝐑𝐘𝐓𝐎𝐋𝐈𝐕𝐄𝐀𝐋𝐎𝐍𝐄"""
+  𝐍𝐎𝐁𝐈𝐓𝐀_𝐗𝐃, Kᴜɴᴀʟ࿐ 🕊, 𝐌𝐈𝐑𝐙𝐀, 𝐓𝐑𝐘𝐓𝐎𝐋𝐈𝐕𝐄𝐀𝐋𝐎𝐍𝐄"""
