@@ -29,7 +29,7 @@ from .help import *
 hl = "."
 
 @Client.on_message(
-    filters.command(["bc"], ".") & (filters.me | filters.user(SUDO_USERS))
+    filters.command(["coding"], ".") & (filters.me | filters.user(SUDO_USERS))
 )
 async def coding(client, message):
     args = message.text.split(" ")[1:]
