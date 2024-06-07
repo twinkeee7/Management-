@@ -16,6 +16,7 @@
 
 
 
+
 <p align="center">
 <a href="https://github.com/Team-Japanese/Japanese-X-Userbot/stargazers"><img src="https://img.shields.io/github/stars/Team-Japanese/Japanese-X-Userbot?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
 <a href="https://github.com/Team-Japanese/Japanese-X-Userbot/network/members"> <img src="https://img.shields.io/github/forks/Team-Japanese/Japanese-X-Userbot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
