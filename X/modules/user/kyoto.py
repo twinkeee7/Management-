@@ -19,3 +19,36 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+
+import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+from .help import * 
+
+hl = "."
+
+@Client.on_message(
+    filters.command(["kyoto"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def castle(client, message):
+    args = message.text.split(" ")[1:]
+    castledata = [
+  "https://graph.org/file/17ad5f4c0dc7f986ad1a6.jpg",
+  "https://graph.org/file/c4325ef42a0956965e67f.jpg",
+  "https://graph.org/file/84e719ed41e14d399e204.jpg",
+  "https://graph.org/file/6150d018074d93f5e2e35.jpg",
+  "https://graph.org/file/79400b0de279fcc9513d8.jpg",
+  "https://graph.org/file/ac67cc37fc77d1fd110e5.jpg",
+  "https://graph.org/file/20ac5ed012069c897e96f.jpg",
+  "https://graph.org/file/79b0812077d828c6b1dee.jpg",
+    ]
+    castle_url = random.choice(castledata)
+    await message.reply_photo(castle_url)
+
+add_command_help(
+    "•─╼⃝𖠁 Kʏᴏᴛᴏ",
+    [
+       ["kyoto", "Gɪᴠᴇ random Kʏᴏᴛᴏ pic."],
+        ],
+)
