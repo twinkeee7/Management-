@@ -46,7 +46,7 @@ def send_images(client, message):
         message.reply_text("Invalid command format. Please use .pinterest <amt> <prompt>")
         return
     limit = command[1]
-    prompt = command[2]
+    prompt  = ''.join(command[2:])
     images = get_images(prompt, limit)
     chat_id = message.chat.id
 
