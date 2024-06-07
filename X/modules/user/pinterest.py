@@ -20,4 +20,42 @@
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
 
-#coming soon 
+import requests
+from pyrogram import Client, filters
+from config import OWNER_ID
+from config import SUDO_USERS
+from config import CMD_HANDLER as cmd
+
+from .help import *
+
+api_url = "https://pinteresimage.nepcoderdevs.workers.dev/"
+
+def get_images(prompt, l):
+    response = requests.get(f"{api_url}?query={prompt}&limit={l}")
+    data = response.json()
+    return [result["imageUrl"] for result in data["results"]]
+
+
+
+@Client.on_message(
+    filters.command(["pinterest"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+def send_images(client, message):
+    command = message.text.split(maxsplit=2)
+    if len(command) < 3:
+        message.reply_text("Invalid command format. Please use .pinterest <amt> <prompt>")
+        return
+    limit = command[1]
+    prompt = command[2]
+    images = get_images(prompt, limit)
+    chat_id = message.chat.id
+
+    for image in images:
+        client.send_photo(chat_id, photo=image)
+
+add_command_help(
+    "•─╼⃝𖠁 Pɪɴᴛᴇʀᴇsᴛ",
+    [
+        ["pinterest", "Tᴏ Gᴇɴᴇʀᴀᴛᴇ Pɪɴᴛᴇʀᴇsᴛ ᴘɪᴄ ɪɴ ᴛʜɪꜱ ᴄʜᴀᴛ."],
+    ],
+)
