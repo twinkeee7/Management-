@@ -61,7 +61,7 @@ async def convert_command(client, message):
         else:
             await message.reply("Sorry, unable to convert. Please check your input currencies.")
     except Exception as e:
-        await message.reply("Invalid command. Please use /convert <amount> <from_currency> <to_currency>")
+        await message.reply("Invalid command. Please use .convert <amount> <from_currency> <to_currency>")
 
 
 add_command_help(
