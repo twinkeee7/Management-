@@ -63,3 +63,10 @@ async def convert_command(client, message):
     except Exception as e:
         await message.reply("Invalid command. Please use /convert <amount> <from_currency> <to_currency>")
 
+
+add_command_help(
+    "•─╼⃝𖠁 Cᴜʀʀᴇɴᴄʏ",
+    [
+       ["currency", "Convert Cᴜʀʀᴇɴᴄʏ to other currency Like Rupees to Yen."],
+        ],
+)
