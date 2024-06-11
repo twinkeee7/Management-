@@ -27,3 +27,39 @@ from pyrogram import filters, Client
 from config import SUDO_USERS
 
 from .help import * 
+
+
+def convert_currency(amount, from_currency, to_currency):
+    url = f"https://api.exchangerate-api.com/v4/latest/{from_currency}"
+    response = requests.get(url)
+    data = response.json()
+    if to_currency in data['rates']:
+        rate = data['rates'][to_currency]
+        converted_amount = amount * rate
+        return converted_amount
+    else:
+        return None
+
+# Command to convert currency
+@Client.on_message(
+    filters.command(["currency"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def convert_command(client, message):
+    try:
+        # Parse command
+        command = message.text.split()
+        amount = float(command[1])
+        from_currency = command[2].upper()
+        to_currency = command[3].upper()
+
+        # Convert currency
+        converted_amount = convert_currency(amount, from_currency, to_currency)
+
+        # Send result
+        if converted_amount:
+            await message.reply(f"{amount} {from_currency} is approximately {converted_amount:.2f} {to_currency}")
+        else:
+            await message.reply("Sorry, unable to convert. Please check your input currencies.")
+    except Exception as e:
+        await message.reply("Invalid command. Please use /convert <amount> <from_currency> <to_currency>")
+
