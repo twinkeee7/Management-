@@ -30,7 +30,7 @@ import asyncio
 from random import choice
 from pyrogram import Client, filters
 from pyrogram.types import Message
-from XDB.data import MASTERS, SUPERRAID
+from XDB.data import MASTERS, RAID
 from config import SUDO_USERS, OWNER_ID
 
 from .help import * 
@@ -101,7 +101,14 @@ async def watcher(_, msg: Message):
     global rusers
     id = msg.from_user.id
     if id in rusers:
-        reply = choice(SUPERRAID)
+        reply = choice(RAID)
         await msg.reply_text(reply)
 
 
+add_command_help(
+    "•─╼⃝𖠁 Rᴇᴘʟʏ ʀᴀɪᴅ",
+    [
+        ["rraid", "Tᴏ ꜱᴇɴᴅ Rᴇᴘʟʏ ʀᴀɪᴅ."],
+        ["drraid", "To Deactivate Rᴇᴘʟʏ ʀᴀɪᴅ"],
+    ],
+)
