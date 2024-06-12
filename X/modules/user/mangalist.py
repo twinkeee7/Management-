@@ -22,6 +22,16 @@
 
 
 import random
+from pyrogram import Client, filters
+from config import SUDO_USERS
+
+from .help import * 
+
+
+@Client.on_message(
+    filters.command(["mangalist"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+
 
 manga_titles = [
     "Naruto",
