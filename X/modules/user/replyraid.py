@@ -21,6 +21,10 @@
 #SOFTWARE.
 
 
+#Credit Japanese X Userbot & Storm Userbot 
+
+#NOBITA XD AND KEXX (KUNAL)
+
 
 import asyncio
 from random import choice
