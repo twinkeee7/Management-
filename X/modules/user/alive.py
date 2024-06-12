@@ -197,3 +197,15 @@ async def setemoji(client: Client, message: Message):
     sql.addgvar("ALIVE_EMOJI", emoji)
     await X.edit(f"**Successfully Customize ALIVE EMOJI Becomes** {emoji}")
     restart()
+
+
+
+add_command_help(
+    "•─╼⃝𖠁 Aʟɪᴠᴇ",
+    [
+       ["alive", "Send alive text."],
+       ["setalivepic", "To set alive pic."],
+       ["setalivetext", "To set alive text."],
+       ["setaliveemoji", "To set alive emoji."],
+    ],
+)
