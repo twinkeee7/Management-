@@ -30,6 +30,7 @@ from pyrogram.types import Message
 from X.helpers.basic import edit_or_reply
 from config import OWNER_ID
 from config import SUDO_USERS
+from .help import *
 
 async def aexec(code, client: Client, message: Message):
     exec(
@@ -80,4 +81,9 @@ async def executor(client: Client, message: Message):
     final_output = f"<b>⥤ ʀᴇsᴜʟᴛ :</b>\n<pre language='python'>{evaluation.strip()}</pre>"
     await edit_or_reply(message, final_output) 
 
-
+add_command_help(
+    "•─╼⃝𖠁 Eᴠᴀʟ",
+    [
+       ["eval", "To execute code."],
+        ],
+)
