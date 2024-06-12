@@ -35,8 +35,8 @@ from config import OWNER_ID
 from config import SUDO_USERS
 from config import CMD_HANDLER as cmd
 from config import OWNER_ID, SUDO_USERS, CMD_HANDLER as cmd
-from XDB.data import RAID
-from XDB.data import RAID, MASTERS
+from XDB.data import SUPERRAID
+from XDB.data import SUPERRAID, MASTERS
 from .help import *
 
 @Client.on_message(
@@ -49,7 +49,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(kex[1])
           counts = int(NOBI[0])
           for _ in range(counts):
-                reply = choice(RAID)
+                reply = choice(SUPERRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0.1)
@@ -59,7 +59,7 @@ async def raid(x: Client, e: Message):
           ok = await x.get_users(user_id)
           counts = int(NOBI[0])
           for _ in range(counts):
-                reply = choice(RAID)
+                reply = choice(SUPERRAID)
                 msg = f"[{ok.first_name}](tg://user?id={ok.id}) {reply}"
                 await x.send_message(e.chat.id, msg)
                 await asyncio.sleep(0.1)
@@ -117,7 +117,7 @@ async def reply_raid_watcher(client: Client, message: Message):
     user_id = message.from_user.id
 
     if user_id in reply_raid_users:
-        reply_text = choice(RAID)
+        reply_text = choice(SUPERRAID)
         await message.reply_text(reply_text)
 
 
@@ -125,5 +125,7 @@ add_command_help(
     "•─╼⃝𖠁 Rᴀɪᴅ",
     [
         ["raid", "Tᴏ ꜱᴇɴᴅ Rᴀɪᴅ Mᴇssᴀɢᴇs."],
+        ["rraid", "To activate reply raid,"],
+        ["drraid", "To De Activate reply raid."],
     ],
 )
