@@ -39,7 +39,11 @@ import random
 
 from .help import *
 
-API_ENDPOINT = "https://spotifydownloader.hellonepdevs.workers.dev/?url={Spotifyurl}"
+# Updated API details
+API_ENDPOINT = "https://spotify-downloader8.p.rapidapi.com/api/spotify"
+API_KEY = "5eb5f408"
+RAPIDAPI_KEY = "d19c1c0167mshbfca18a47fb33a0p14552ejsn9b47b7ac383a"
+RAPIDAPI_HOST = "spotify-downloader8.p.rapidapi.com"
 
 @Client.on_message(
     filters.command(["spotify"], ".") & (filters.me | filters.user(SUDO_USERS))
@@ -58,10 +62,14 @@ async def spotify_downloader(client: Client, message: Message):
         await asyncio.sleep(0.5)
         await msg.edit(stage)
     
-    url = API_ENDPOINT.format(Spotifyurl=quote(Spotifyurl))
+    querystring = {"apikey": API_KEY, "search": Spotifyurl}
+    headers = {
+        "x-rapidapi-key": RAPIDAPI_KEY,
+        "x-rapidapi-host": RAPIDAPI_HOST
+    }
     
     try:
-        response = requests.get(url)
+        response = requests.get(API_ENDPOINT, headers=headers, params=querystring)
         response.raise_for_status()
         data = response.json()
         
@@ -79,6 +87,7 @@ async def spotify_downloader(client: Client, message: Message):
         await msg.edit(f"Error: {str(e)}")
     
     await message.delete()
+    
     
 
 
