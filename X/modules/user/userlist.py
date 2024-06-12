@@ -40,7 +40,9 @@ from reportlab.pdfgen import canvas
 from .help import * 
 
 
-
+@Client.on_message(
+    filters.command(["userlist"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
 async def generate_user_list_pdf():
     users = await app.get_users()
     
