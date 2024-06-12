@@ -42,4 +42,3 @@ httpx[http2]
 openai
 flask
 flask_restful
-reportlab
