@@ -91,3 +91,12 @@ async def cancel_spam(client: Client, message: Message):
         except:
             pass
         return await message.edit("**Stop Mention.**") 
+
+
+add_command_help(
+    "•─╼⃝𖠁 Mᴇɴᴛɪᴏɴᴀʟʟ",
+    [
+       ["mentionall", "Mᴇɴᴛɪᴏɴ ᴀʟʟ Mᴇᴍʙᴇʀs ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+       ["cancel", "Tᴏ Cᴀɴᴄᴇʟ Mᴇɴᴛɪᴏɴ ᴀʟʟ Mᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+        ],
+)
