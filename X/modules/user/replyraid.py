@@ -19,3 +19,12 @@
 #LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 #OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 #SOFTWARE.
+
+
+
+import asyncio
+from random import choice
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from XDB.data import MASTERS, RAID
+from config import SUDO_USERS, OWNER_ID
