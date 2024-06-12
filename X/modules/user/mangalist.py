@@ -48,3 +48,11 @@ manga_titles = [
 
 random_title = random.choice(manga_titles)
 print(random_title)
+
+
+add_command_help(
+    "•─╼⃝𖠁 Mᴀɴɢᴀ ʟɪsᴛ",
+    [
+       ["mangalist", "Gɪᴠᴇ random Mᴀɴɢᴀ ʟɪsᴛ name."],
+        ],
+)
