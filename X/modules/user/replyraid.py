@@ -26,9 +26,80 @@
 #NOBITA XD AND KEXX (KUNAL)
 
 
-#import asyncio
-#from random import choice
-#from pyrogram import Client, filters
-#from pyrogram.types import Message
-#from XDB.data import MASTERS, RAID
-#from config import SUDO_USERS, OWNER_ID
+import asyncio
+from random import choice
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from XDB.data import MASTERS, SUPERRAID
+from config import SUDO_USERS, OWNER_ID
+
+
+@Client.on_message(
+    filters.command(["rraid", "replyraid"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def rraid(x: Client, message: Message):
+    global rusers
+    kex = message.text.split(" ")
+
+    if len(kex) > 1:
+        ok = await x.get_users(kex[1])
+        id = ok.id
+        if id in MASTERS:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏ ɪꜱ Jᴀᴘᴀɴᴇsᴇ ᴏᴡɴᴇʀ ☠️")
+        elif id == OWNER_ID:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ 🥀")
+        elif id in SUDO_USERS:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏꜱ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ 💗")
+        else:
+            rusers.append(id)
+            await message.reply_text("ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ ✅")
+
+    elif message.reply_to_message:
+        user_id = message.reply_to_message.from_user.id
+        if user_id in MASTERS:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏ ɪꜱ Jᴀᴘᴀɴᴇsᴇ ᴏᴡɴᴇʀ ☠️")
+        elif user_id == OWNER_ID:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏ ɪꜱ ᴏᴡɴᴇʀ ᴏꜰ ᴛʜᴇꜱᴇ ʙᴏᴛꜱ 🥀")
+        elif user_id in SUDO_USERS:
+            await message.reply_text("ɴᴏᴘᴇ ᴛʜɪꜱ ɢᴜʏꜱ ɪꜱ ꜱᴜᴅᴏ ᴜꜱᴇʀ 💗")
+        else:
+            rusers.append(user_id)
+            await message.reply_text("» ᴀᴄᴛɪᴠᴀᴛᴇᴅ ʀᴇᴘʟʏʀᴀɪᴅ ✅")
+
+    else:
+        await message.reply_text(".ʀʀᴀɪᴅ <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+
+@Client.on_message(
+    filters.command(["drraid", "draid", "dreplyraid"], ".") & (filters.me | filters.user(SUDO_USERS))
+)
+async def draid(x: Client, message: Message):
+    global rusers
+    kex = message.text.split(" ")
+
+    if len(kex) > 1:
+        ok = await x.get_users(kex[1])
+        id = ok.id
+        if id in rusers:
+            rusers.remove(id)
+            await message.reply_text("ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ ✅")
+
+    elif message.reply_to_message:
+        user_id = message.reply_to_message.from_user.id
+        ok = await x.get_users(user_id)
+        id = ok.id
+        if id in rusers:
+            rusers.remove(id)
+            await message.reply_text("ʀᴇᴘʟʏ ʀᴀɪᴅ ᴅᴇ-ᴀᴄᴛɪᴠᴀᴛᴇᴅ ✅")
+
+    else:
+        await message.reply_text(".ᴅʀʀᴀɪᴅ <ᴜꜱᴇʀɴᴀᴍᴇ ᴏꜰ ᴜꜱᴇʀ> <ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜꜱᴇʀ>")
+
+@Client.on_message(~filters.me & filters.incoming)
+async def watcher(_, msg: Message):
+    global rusers
+    id = msg.from_user.id
+    if id in rusers:
+        reply = choice(SUPERRAID)
+        await msg.reply_text(reply)
+
+
