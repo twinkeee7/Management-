@@ -156,3 +156,11 @@ async def no_longer_afk(client: Client, message: Message):
         except BaseException:
             pass
         MENTIONED = []
+
+
+add_command_help(
+    "•─╼⃝𖠁 Aғᴋ",
+    [
+       ["afk", "Sᴇɴᴅ ᴀᴡᴀʏ ғʀᴏᴍ ᴋᴇʏʙᴏᴀʀᴅ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+        ],
+)
