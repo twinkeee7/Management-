@@ -357,7 +357,7 @@ async def hentai_api(bot: Client, message: Message):
 
 for x in cf_api_data:
     add_command_help(
-        "•─╼⃝𖠁 ɴꜱғᴡ",
+        "•─╼⃝𖠁 Nsғᴡ",
         [
             [f".{x}", cf_api_data[x]["help"]],
         ],
