@@ -25,6 +25,8 @@ from X.Database.pm import *
 from X.powers import get_id
 from config import PM_PIC
 
+from .help import *
+
 hl = "."
 
 JPX = PM_PIC
@@ -121,3 +123,12 @@ async def wtch(client, message):
     await message.reply_photo(JPX, caption=TEXT.format((await client.get_me()).first_name, await limit(), await get_warns(message.from_user.id)))
 
 
+add_command_help(
+    "•─╼⃝𖠁 Pᴍᴘᴇʀᴍɪᴛ",
+    [
+       ["pmpermit on", "Tᴏ ᴇɴᴀʙʟᴇ Pᴍ ᴘᴇʀᴍɪᴛ ᴍᴇssᴀɢᴇ."],
+       ["pmpermit off", "Tᴏ Dɪsᴀʙʟᴇ Pᴍ ᴘᴇʀᴍɪᴛ ᴍᴇssᴀɢᴇ."],
+       ["approve", "Tᴏ ᴀᴘᴘʀᴏᴠᴇ sᴏᴍᴇᴏɴᴇ ɪɴ ʏᴏᴜʀ ᴅᴍ."],
+       ["disapprove", "Tᴏ Dɪsᴀᴘᴘʀᴏᴠᴇ sᴏᴍᴇᴏɴᴇ ɪɴ ʏᴏᴜʀ ᴅᴍ."],
+        ],
+)
