@@ -174,7 +174,7 @@ async def pink(client: Client, message: Message):
 async def X(client: Client, message: Message):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xx = await edit_or_reply(message, "DEAR COCOKIN")
+    xx = await edit_or_reply(message, "DEAR MASTER")
     await xx.edit("8=✊==D")
     await xx.edit("8==✊=D")
     await xx.edit("8===✊D")
@@ -190,12 +190,25 @@ async def X(client: Client, message: Message):
     await xx.edit("8=✊==D")
     await xx.edit("8==✊=D")
     await xx.edit("8===✊D")
-    await xx.edit("**AHH I'M GOING TO CROT**")
+    await xx.edit("**AHH I'M GOING TO FUCK**")
     await xx.edit("8===✊D💦")
     await xx.edit("8====D💦💦")
     await xx.edit("**CROOTTTT**")
     await xx.edit("**CROOTTTT AAAHHH.....**")
-    await xx.edit("AHHH ENAKKKKK DARLINGGGG🥵🥵")
+    await xx.edit("AHHH DARLINGGGG🥵🥵")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xx.edit
+
+
+
+add_command_help(
+    "•─╼⃝𖠁 Pɪɴɢ",
+    [
+       ["ping", "Sᴇɴᴅ Pɪɴɢ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+       ["pink", "Sᴇɴᴅ Pɪɴɢ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+       ["speedtest", "Sᴇɴᴅ Sᴘᴇᴇᴅᴛᴇsᴛ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+       ["dc", "Sᴇɴᴅ Dᴄ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+       ["pong", "Sᴇɴᴅ Pᴏɴɢ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ
+        ],
+)
