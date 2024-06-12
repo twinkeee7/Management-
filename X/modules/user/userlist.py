@@ -59,9 +59,6 @@ async def generate_user_list_pdf():
     
     c.save()
 
-with app:
-    
-    app.loop.run_until_complete(generate_user_list_pdf())
 
 
 add_command_help(
