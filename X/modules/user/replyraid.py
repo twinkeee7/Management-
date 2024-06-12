@@ -33,6 +33,8 @@ from pyrogram.types import Message
 from XDB.data import MASTERS, SUPERRAID
 from config import SUDO_USERS, OWNER_ID
 
+from .help import * 
+
 
 @Client.on_message(
     filters.command(["rraid", "replyraid"], ".") & (filters.me | filters.user(SUDO_USERS))
