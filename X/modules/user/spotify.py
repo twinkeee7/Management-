@@ -80,3 +80,11 @@ async def spotify_downloader(client: Client, message: Message):
     
     await message.delete()
     
+
+
+add_command_help(
+    "•─╼⃝𖠁 Sᴘᴏᴛɪғʏ",
+    [
+       ["spotify", "Sᴇɴᴅ Sᴘᴏᴛɪғʏ Sᴏɴɢ ɪɴ ᴛʜᴇ ᴄʜᴀᴛ."],
+        ],
+)
