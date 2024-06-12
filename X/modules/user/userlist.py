@@ -22,16 +22,40 @@
 #SOFTWARE.
 
 
-#CREDIT : NOBITA XD AND TRYTOLIVEALONE
+#CREDIT : NOBITA XD
 #DON'T KANG FUCKING COWARD
 #BSDKE KANG KIYA TOH SOCH LIYO
 #AAG LAGA DUNGA TERE ANDAR 
 #SAMJHA ? 
 
 
-#import requests
-#from pyrogram import Client, filters
-#from pyrogram.types import Message
-#from config import CMD_HANDLER as cmd
-#from config import SUDO_USERS
-#from .help import * 
+import reportlab
+from pyrogram import Client, filters
+from pyrogram.types import Message
+from config import SUDO_USERS
+from pyrogram import Client
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
+
+from .help import * 
+
+
+
+async def generate_user_list_pdf():
+    users = await app.get_users()
+    
+    c = canvas.Canvas("user_list.pdf", pagesize=letter)
+    
+    c.setFont("Helvetica", 12)
+    c.drawString(100, 750, "User List:")
+    
+    y_position = 730
+    for user in users:
+        user_info = f"{user.first_name} {user.last_name} - @{user.username}"
+        c.drawString(100, y_position, user_info)
+        y_position -= 20
+    
+    c.save()
+
+    app.loop.run_until_complete(generate_user_list_pdf())
+
