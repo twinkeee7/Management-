@@ -47,7 +47,7 @@ async def hinata(client, message):
     await message.reply_photo(hinata_url)
 
 add_command_help(
-    "•─╼⃝𖠁 Rᴀɪᴅᴇɴ Sʜᴏᴜʙᴇɴ",
+    "•─╼⃝𖠁 Rᴀɪᴅᴇɴ",
     [
        ["raiden", "Gɪᴠᴇ random Rᴀɪᴅᴇɴ Sʜᴏᴜʙᴇɴ pic."],
         ],
