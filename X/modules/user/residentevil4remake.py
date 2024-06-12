@@ -46,7 +46,7 @@ async def castle(client, message):
     await message.reply_photo(castle_url)
 
 add_command_help(
-    "•─╼⃝𖠁 Rᴇsɪᴅᴇɴᴛ ᴇᴠɪʟ 4 ʀᴇᴍᴀᴋᴇ",
+    "•─╼⃝𖠁 Rᴇsɪᴅᴇɴᴛ4",
     [
        ["rs4", "Gɪᴠᴇ random Rᴇsɪᴅᴇɴᴛ ᴇᴠɪʟ 4 ʀᴇᴍᴀᴋᴇ pic."],
         ],
