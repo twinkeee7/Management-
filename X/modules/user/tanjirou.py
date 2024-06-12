@@ -46,7 +46,7 @@ async def demon(client, message):
     await message.reply_photo(demon_url)
 
 add_command_help(
-    "•─╼⃝𖠁 Kᴀᴍᴀᴅᴏ Tᴀɴᴊɪʀᴏᴜ",
+    "•─╼⃝𖠁 Tᴀɴᴊɪʀᴏᴜ",
     [
        ["tanjirou", "Gɪᴠᴇ random Kᴀᴍᴀᴅᴏ Tᴀɴᴊɪʀᴏᴜ Sʟᴀʏᴇʀ pic."],
         ],
