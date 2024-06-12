@@ -26,9 +26,9 @@
 #NOBITA XD AND KEXX (KUNAL)
 
 
-import asyncio
-from random import choice
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from XDB.data import MASTERS, RAID
-from config import SUDO_USERS, OWNER_ID
+#import asyncio
+#from random import choice
+#from pyrogram import Client, filters
+#from pyrogram.types import Message
+#from XDB.data import MASTERS, RAID
+#from config import SUDO_USERS, OWNER_ID
