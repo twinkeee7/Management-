@@ -29,7 +29,7 @@ from dotenv import load_dotenv
 
 load_dotenv("config.env")
 
-ALIVE_EMOJI = getenv("ALIVE_EMOJI", "🥵")
+ALIVE_EMOJI = getenv("ALIVE_EMOJI", "🥵😂")
 ALIVE_LOGO = getenv("ALIVE_LOGO", "https://graph.org/file/ec99cb6dba229bd984537.jpg")
 PM_PIC = getenv("PM_PIC", "https://graph.org/file/936ef33023a77fa9a6813.jpg")
 ALIVE_TEKS_CUSTOM = getenv("ALIVE_TEKS_CUSTOM", "Hey, I am alive.")
